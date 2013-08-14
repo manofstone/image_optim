@@ -247,9 +247,17 @@ private
 end
 
 %w[
-  pngcrush pngout optipng advpng
+  pngcrush optipng advpng
   jhead jpegoptim jpegtran
   gifsicle
 ].each do |worker|
   require "image_optim/worker/#{worker}"
 end
+
+# %w[
+#   pngcrush pngout optipng advpng
+#   jhead jpegoptim jpegtran
+#   gifsicle
+# ].each do |worker|
+#   require "image_optim/worker/#{worker}"
+# end
